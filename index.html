@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pat's Chili Dogs - Tucson's Legendary Hot Dog Joint Since 1961</title>
+  <meta name="description" content="Pat's Chili Dogs in Tucson, AZ - serving legendary chili dogs since 1961 in the Barrio Hollywood neighborhood. Menu, hours, and history.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Inter:wght@400;500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Pat's Chili Dogs</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#history">History</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#location">Visit Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Tucson's Legendary</p>
+      <h1 class="hero-title">Pat's Chili Dogs</h1>
+      <p class="hero-sub">Serving the Barrio Hollywood neighborhood since 1961</p>
+      <a href="#menu" class="btn btn-primary">See the Menu</a>
+    </div>
+  </header>
+
+  <!-- About / History -->
+  <section class="section history" id="history">
+    <div class="container">
+      <h2 class="section-title">Our Story</h2>
+      <div class="history-grid">
+        <div class="history-card">
+          <div class="history-year">1961</div>
+          <h3>A Tucson Original</h3>
+          <p>
+            Henry "Pat" Patterson opened Pat's Chili Dogs in the heart of Tucson's
+            Barrio Hollywood neighborhood with a simple vision: great chili dogs,
+            honest burgers, and nothing fancy. The original menu featured hot dogs,
+            hamburgers, chicken, fish, shrimp, fries, and Pat's signature chili &mdash;
+            and that's pretty much what you'll still find today.
+          </p>
+        </div>
+        <div class="history-card">
+          <div class="history-year">1963</div>
+          <h3>Charlie Joins the Team</h3>
+          <p>
+            A 15-year-old Charlie Hernandez walked through the doors and started
+            working alongside Pat. He learned every detail of the operation &mdash;
+            the recipes, the customers, the rhythm of the kitchen. He never left.
+          </p>
+        </div>
+        <div class="history-card">
+          <div class="history-year">1979</div>
+          <h3>Passing the Torch</h3>
+          <p>
+            When Pat Patterson was ready to move on, he sold the restaurant to Charlie,
+            the person who knew it best. Pat's parting advice was simple: take care of
+            the customers and keep the food consistent. Charlie has lived by those words
+            for over four decades.
+          </p>
+        </div>
+        <div class="history-card">
+          <div class="history-year">Today</div>
+          <h3>A Family Legacy</h3>
+          <p>
+            Charlie still works the counter daily. His daughter and grandchildren have
+            joined the team, preparing to carry Pat's into the future. The staff still
+            memorize your order &mdash; no writing anything down. As Charlie says,
+            <em>"I don't want nobody writing down any orders."</em> That's how Pat's
+            has always done it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <h2 class="section-title">The Menu</h2>
+      <p class="menu-note">Simple. Classic. No-nonsense. Prices may vary &mdash; call ahead to confirm.</p>
+
+      <div class="menu-grid">
+        <!-- Dogs -->
+        <div class="menu-category">
+          <h3 class="menu-category-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            The Dogs
+          </h3>
+          <div class="menu-item featured">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Chili Dog</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$1.90</span>
+            </div>
+            <p class="menu-item-desc">The original. Mustard, chili, and raw onions. Heat varies by season.</p>
+            <span class="badge">Fan Favorite</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">4 Chili Dogs + Large Fries</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$10.00</span>
+            </div>
+            <p class="menu-item-desc">The family deal. Four chili dogs and a large box of fresh fries.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Corn Dog</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">&mdash;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burgers -->
+        <div class="menu-category">
+          <h3 class="menu-category-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            Burgers
+          </h3>
+          <div class="menu-item featured">
+            <div class="menu-item-header">
+              <span class="menu-item-name">The Big Pat</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.00</span>
+            </div>
+            <p class="menu-item-desc">Double burger with cheese, chili, mustard, pickles, and lettuce.</p>
+            <span class="badge">House Special</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Chili Burger</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.25</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Cheeseburger</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.25</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandwiches & Dinners -->
+        <div class="menu-category">
+          <h3 class="menu-category-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            Sandwiches & Dinners
+          </h3>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Chicken Sandwich</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.10</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Fried Fish Sandwich</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.10</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Tuna Fish Sandwich</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.10</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Grilled Cheese</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.30</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Chicken Dinner</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$6.70</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Fish & Chips</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$6.75</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Fried Shrimp</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$6.75</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sides & Drinks -->
+        <div class="menu-category">
+          <h3 class="menu-category-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            Sides & Extras
+          </h3>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Chili Bowl (8 oz.)</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.75</span>
+            </div>
+            <p class="menu-item-desc">Beef, beans, and fresh chili peppers. Southwestern-style.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">French Fries</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">&mdash;</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Onion Rings</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.60</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Jalape&ntilde;o</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$0.88</span>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Drinks</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$1.50</span>
+            </div>
+            <p class="menu-item-desc">Sun Tea, Orange, Pepsi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section location" id="location">
+    <div class="container">
+      <h2 class="section-title">Come Visit</h2>
+      <div class="location-grid">
+        <div class="location-info">
+          <div class="info-block">
+            <h3>Address</h3>
+            <p>
+              1202 W Niagara St<br>
+              Tucson, AZ 85745<br>
+              <em>Barrio Hollywood neighborhood</em>
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Phone</h3>
+            <p><a href="tel:+15206240891">(520) 624-0891</a></p>
+          </div>
+          <div class="info-block">
+            <h3>Hours</h3>
+            <table class="hours-table">
+              <tr><td>Monday &ndash; Wednesday</td><td>11:00 AM &ndash; 9:00 PM</td></tr>
+              <tr><td>Thursday &ndash; Saturday</td><td>11:00 AM &ndash; 10:00 PM</td></tr>
+              <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+            </table>
+          </div>
+          <div class="info-block">
+            <h3>Good to Know</h3>
+            <ul class="details-list">
+              <li>Cash & cards accepted</li>
+              <li>Counter service &mdash; fast and friendly</li>
+              <li>No alcohol served</li>
+              <li>Budget-friendly prices</li>
+            </ul>
+          </div>
+        </div>
+        <div class="location-map">
+          <iframe
+            title="Pat's Chili Dogs location map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.5!2d-110.986!3d32.228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d671b7e6c0e4e7%3A0x9e67e91b7c22b5e1!2sPat&#39;s%20Drive%20In!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Pat's Chili Dogs</span>
+          <p>A Tucson tradition since 1961</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.yelp.com/biz/pats-drive-in-tucson" target="_blank" rel="noopener">Yelp</a>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g60950-d518523-Reviews-Pat_s_Drive_In-Tucson_Arizona.html" target="_blank" rel="noopener">TripAdvisor</a>
+        </div>
+      </div>
+      <p class="footer-disclaimer">
+        This is a fan-made tribute site and is not officially affiliated with Pat's Drive In.
+        Prices and hours shown may not be current &mdash; please call <a href="tel:+15206240891">(520) 624-0891</a> to confirm.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav-links').classList.remove('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

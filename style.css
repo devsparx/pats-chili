@@ -1,0 +1,563 @@
+/* ============================================
+   Pat's Chili Dogs — Style
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #b91c1c;
+  --red-dark: #7f1d1d;
+  --red-light: #fef2f2;
+  --yellow: #f59e0b;
+  --yellow-light: #fef3c7;
+  --cream: #fefce8;
+  --brown: #78350f;
+  --brown-light: #92400e;
+  --text: #1c1917;
+  --text-muted: #57534e;
+  --bg: #fffbeb;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.12);
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- NAV ---- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background .3s, box-shadow .3s;
+}
+
+.nav.scrolled {
+  background: rgba(127, 29, 29, .97);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.35rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .95rem;
+  transition: color .2s;
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform .3s;
+}
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(135deg, var(--red-dark) 0%, var(--red) 40%, var(--brown-light) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(245, 158, 11, .15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, .1) 0%, transparent 50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+}
+
+.hero-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--yellow);
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 24px rgba(0,0,0,.3);
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,.8);
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: var(--brown);
+}
+
+/* ---- SECTIONS ---- */
+.section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--red-dark);
+}
+
+/* ---- HISTORY ---- */
+.history {
+  background: var(--white);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.history-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: relative;
+  border: 1px solid rgba(245, 158, 11, .2);
+}
+
+.history-year {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 2.5rem;
+  color: var(--yellow);
+  line-height: 1;
+  margin-bottom: 12px;
+  opacity: .7;
+}
+
+.history-card h3 {
+  font-size: 1.15rem;
+  color: var(--red-dark);
+  margin-bottom: 10px;
+}
+
+.history-card p {
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ---- MENU ---- */
+.menu {
+  background: var(--bg);
+}
+
+.menu-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .95rem;
+  margin-bottom: 48px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.menu-category {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,.04);
+}
+
+.menu-category-title {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 1.2rem;
+  color: var(--red);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-category-title svg {
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.menu-item {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.menu-item-name {
+  font-weight: 600;
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
+.menu-item-dots {
+  flex: 1;
+  border-bottom: 2px dotted rgba(0,0,0,.12);
+  min-width: 20px;
+  margin-bottom: 4px;
+}
+
+.menu-item-price {
+  font-weight: 600;
+  color: var(--red);
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
+.menu-item-desc {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.menu-item.featured {
+  background: var(--yellow-light);
+  margin: 0 -16px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--red);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+
+/* ---- LOCATION ---- */
+.location {
+  background: var(--white);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.info-block {
+  margin-bottom: 32px;
+}
+
+.info-block h3 {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 1rem;
+  color: var(--red);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-block p,
+.info-block a {
+  color: var(--text-muted);
+  font-size: .95rem;
+}
+
+.info-block a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table td {
+  padding: 6px 0;
+  font-size: .95rem;
+  color: var(--text-muted);
+}
+
+.hours-table td:last-child {
+  text-align: right;
+  font-weight: 500;
+}
+
+.hours-table tr.closed td {
+  color: var(--red);
+}
+
+.details-list {
+  list-style: none;
+}
+
+.details-list li {
+  padding: 4px 0;
+  font-size: .95rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 20px;
+}
+
+.details-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.location-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 400px;
+  box-shadow: var(--shadow-md);
+}
+
+.location-map iframe {
+  display: block;
+  min-height: 400px;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background: var(--red-dark);
+  color: rgba(255,255,255,.7);
+  padding: 48px 0 32px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.footer-logo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.footer-brand p {
+  font-size: .9rem;
+  margin-top: 4px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  font-size: .9rem;
+  transition: color .2s;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.footer-disclaimer {
+  font-size: .8rem;
+  color: rgba(255,255,255,.4);
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 24px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.footer-disclaimer a {
+  color: rgba(255,255,255,.5);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: var(--red-dark);
+    flex-direction: column;
+    padding: 80px 32px;
+    gap: 24px;
+    transition: right .3s ease;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-map {
+    min-height: 300px;
+  }
+
+  .location-map iframe {
+    min-height: 300px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
